@@ -1,38 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piano Action on Spline</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    #canvas3d {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Action</title>
+    <!-- Link to Spline Scene -->
+    <script src="https://prod.spline.design/nndbsLW1iGft9pyb/scene.splinecode"></script>
 </head>
 <body>
-
-<!-- Spline Embed -->
-<iframe id="canvas3d" src="https://prod.spline.design/nndbsLW1iGft9pyb" frameborder="0"></iframe>
-
-<script>
-  // Access the Spline instance
-  const iframe = document.getElementById("canvas3d");
-  iframe.addEventListener("load", () => {
-    const contentWindow = iframe.contentWindow;
-    const scene = contentWindow.document.querySelector('canvas');
-    
-    // Add your interactive code here
-    console.log(scene);
-  });
-</script>
-
+    <div id="spline-container" style="width: 100%; height: 100vh;"></div>
+    <script>
+        // This will initialize your Spline scene inside the container
+        const container = document.getElementById('spline-container');
+        const spline = new Spline('https://prod.spline.design/nndbsLW1iGft9pyb/scene.splinecode', container);
+    </script>
 </body>
 </html>
