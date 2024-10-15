@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano Action on Spline</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    #canvas3d {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Spline Embed -->
+<iframe id="canvas3d" src="https://prod.spline.design/nndbsLW1iGft9pyb" frameborder="0"></iframe>
+
+<script>
+  // Access the Spline instance
+  const iframe = document.getElementById("canvas3d");
+  iframe.addEventListener("load", () => {
+    const contentWindow = iframe.contentWindow;
+    const scene = contentWindow.document.querySelector('canvas');
+    
+    // Add your interactive code here
+    console.log(scene);
+  });
+</script>
+
+</body>
+</html>
